@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    // background-image: url("../../assets/bg2.jpg");
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-image: radial-gradient(at 47% 33%, hsl(229.71, 27%, 76%) 0, transparent 59%), radial-gradient(at 82% 65%, hsl(193.74, 51%, 51%) 0, transparent 55%);
+    // background: linear-gradient(60deg, rgba(0, 0, 255, 0.545), rgba(238, 130, 238, 0.52));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    // overflow: scroll;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.grid-container {
+    background-image: url("../../assets/photo-1519681393784-d120267933ba.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 3fr;
+    // grid-template-rows: 1fr;
+}
+
+nav {
+    grid-area: "nav";
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+    // display: none;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        cursor: pointer;
+        width: 5px;
+        // background: rgba(255, 253, 253, 0.377);
+        background: linear-gradient(60deg, rgba(0, 0, 255, 0.63), rgba(238, 130, 238, 0.679));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 5px;
+        background-color: #e7e3e3;
+        cursor: pointer;
+    }
+    backdrop-filter: blur(23px) saturate(157%);
+    -webkit-backdrop-filter: blur(23px) saturate(157%);
+    background-color: rgba(255,
+    255,
+    255,
+    0.54);
+    // Barangay logo
+    .logo-con {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        padding: 5px;
+        margin-top: 1px;
+        // background-color: grey;
+        height: 10em;
+        width: inherit;
+        // backdrop-filter: blur(23px) saturate(157%);
+        // -webkit-backdrop-filter: blur(23px) saturate(157%);
+        // background-color: rgba(255, 255, 255, 0.54);
+        background-color: transparent;
+        img {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            align-self: center;
+        }
+    }
+    // Menu container
+    .menu-1 {
+        h3,
+        p {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        background-color: transparent;
+        width: inherit;
+        height: inherit;
+        // overflow: scroll;
+        .dstitle {
+            padding-left: 10px;
+            h3 {
+                color: black;
+                border-bottom-style: solid;
+                border-block-color: rgb(241, 236, 236);
+                border-bottom-width: 100%;
+            }
+        }
+        .menu {
+            padding-left: 10px;
+            background-color: transparent;
+            height: max-content;
+        }
+        // ////@at-root
+        .menu_btn {
+            padding: 0;
+            margin: 0;
+            border: none;
+            background: none;
+        }
+        .menu_btn {
+            --primary-color: #111;
+            --hovered-color: #000000;
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            // font-weight: 600;
+            font-size: 20px;
+            gap: 0.5rem;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .menu_btn p {
+            margin: 0;
+            position: relative;
+            font-size: 0.7em;
+            color: var(--primary-color);
+        }
+        .menu_btn::after {
+            position: absolute;
+            content: "";
+            width: 0;
+            left: 0;
+            bottom: -7px;
+            background: var(--hovered-color);
+            height: 2px;
+            -webkit-transition: 0.3s ease-out;
+            transition: 0.2s ease-out;
+        }
+        .menu_btn .menu_title::before {
+            position: absolute;
+            /*   box-sizing: border-box; */
+            content: attr(data-before);
+            width: 0%;
+            inset: 0;
+            color: var(--hovered-color);
+            // color: white;
+            overflow: hidden;
+            -webkit-transition: 0.3s ease-out;
+            transition: 0.2s ease-out;
+        }
+        .menu_title {
+            .menu-icon {
+                margin-right: 2px;
+            }
+        }
+        .menu_btn:hover::after {
+            width: 100%;
+        }
+        .butmenu_btnton:hover p::before {
+            color: black;
+            width: 100%;
+        }
+        .menu_btn:hover .hover-effect {
+            -webkit-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            transform: translateX(4px);
+            color: var(--hovered-color);
+            color: rgb(0, 0, 0);
+            opacity: 1;
+        }
+        .menu_btn:hover .menu-icon {
+            color: rgb(0, 0, 0);
+        }
+        .menu_btn .hover-effect {
+            color: var(--primary-color);
+            color: black;
+            -webkit-transition: 0.2s;
+            transition: 0.2s;
+            position: relative;
+            width: 15px;
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.2;
+            opacity: 0;
+        }
+        .active-menu .hover-effect {
+            -webkit-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            transform: translateX(4px);
+            color: var(--hovered-color);
+            opacity: 1;
+        }
+        .active-menu::after {
+            width: 100%;
+        }
+        /////
+        .dsmenu {
+            // background-color: pink;
+            margin-bottom: 1em;
+            p {
+                user-select: none;
+                color: black;
+                cursor: pointer;
+                font-size: large;
+            }
+            img {
+                user-select: none;
+                margin-right: 3px;
+            }
+        }
+        .menu-2 {
+            background-color: transparent;
+            width: inherit;
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            position: relative;
+            // display: none;
+            .dstitle {
+                padding-left: 10px;
+                h3 {
+                    color: black;
+                    border-bottom-style: solid;
+                    border-block-color: rgb(241, 236, 236);
+                    border-bottom-width: rgb(146, 146, 146);
+                }
+            }
+            .menu {
+                padding-left: 10px;
+                height: inherit;
+                background-color: transparent;
+            }
+            .dsmenu {
+                // background-color: pink;
+                p {
+                    color: rgb(8, 8, 8);
+                    cursor: pointer;
+                    font-size: large;
+                }
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    #back {
+        display: none;
+    }
+}
+
+// Main Section
+section {
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+    padding-top: -4em;
+    // background: rgba(255, 253, 253, 0.377);
+    // box-shadow: 85px 10px 90px 10px rgba(31, 38, 135, 0.959);
+    // backdrop-filter: blur(20px);
+    // -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px) saturate(157%);
+    -webkit-backdrop-filter: blur(30px) saturate(157%);
+    background-color: rgba(255, 255, 255, 0.37);
+    height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        width: 5px;
+        background: rgba(255, 253, 253, 0.377);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 5px;
+        background-color: #7a7a7a;
+    }
+    header {
+        margin-bottom: 2em;
+        position: sticky;
+        top: 0;
+        // padding: 1px;
+        margin-top: 1px;
+        background: rgba(255, 255, 255, 0.719);
+        // box-shadow: 200px 200px 100px 1px rgba(31, 38, 135, 0.87);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        // background-color: red;
+        height: max-content;
+        width: inherit;
+        padding-bottom: 1px;
+        display: flex;
+        z-index: 99;
+        // background-color: transparent;
+        #humburger_menu {
+            background-color: transparent;
+            cursor: pointer;
+            display: none;
+            width: 3em;
+            img {
+                user-select: none;
+                width: 3em;
+                height: 3em;
+            }
+        }
+    }
+    .sec {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        height: fit-content;
+        background-color: transparent;
+        display: none;
+        scroll-behavior: smooth;
+    }
+}
+
+.selected {
+    display: block !important;
+}
+
+// official edit modal
+#official-modal {
+    #editOfficial,
+    #addOfficial {
+        backdrop-filter: blur(5px) saturate(157%);
+        -webkit-backdrop-filter: blur(5px) saturate(157%);
+        background-color: rgba(255, 255, 255, 0.122);
+    }
+}
+
+@media only screen and (min-width:600px) {
+    nav {
+        height: 100vh !important;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    section {
+        header {
+            #humburger_menu {
+                margin-left: 2px;
+                display: block;
+                outline: none;
+                border: none;
+                width: fit-content;
+                background-color: transparent;
+                img {
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                }
+            }
+        }
+        .header-con {
+            .home-con {
+                button {
+                    .img {
+                        width: 3em;
+                        height: 3em;
+                    }
+                }
+            }
+            .notif-con {
+                button {
+                    .img {
+                        width: 3em;
+                        height: 3em;
+                    }
+                }
+            }
+        }
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        z-index: 99;
+        position: absolute;
+        width: 100%;
+        height: 0vh;
+        transition: all 0.3s ease-in-out 0s;
+        // overflow: ;
+        .menu-1 {
+            position: relative;
+            .menu {
+                position: relative;
+            }
+        }
+        #back {
+            cursor: pointer;
+            display: block;
+            z-index: 100;
+            width: 2em;
+            margin-top: 5px;
+            position: absolute;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            img {
+                user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                -moz-user-select: none;
+                width: 3em;
+                height: 3em;
+            }
+        }
+    }
+    .left-con {
+        position: absolute;
+        display: none;
+        z-index: 99;
+        width: 100%;
+        background-color: rgba(214, 212, 212, 0.637) !important;
+        backdrop-filter: blur(26px) saturate(157%) !important;
+        -webkit-backdrop-filter: blur(26px) saturate(157%) !important;
+        background-color: rgba(255, 255, 255, 0.587) !important;
+    }
+}

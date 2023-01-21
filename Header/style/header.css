@@ -1,0 +1,66 @@
+.header-con {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  background-color: transparent;
+}
+
+.header-con button {
+  float: left;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.header-con .home-con {
+  margin-top: 5px;
+}
+
+.header-con .home-con button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.header-con .home-con button .img {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  width: 1.8em;
+}
+
+.header-con .notif-con {
+  margin-right: 1.5em;
+  margin-left: 1em;
+  margin-top: 5px;
+}
+
+.header-con .notif-con button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.header-con .notif-con button .notif-badge {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+
+.header-con .notif-con button .notif-badge::after {
+  content: "1";
+  position: relative;
+  color: blue;
+}
+/*# sourceMappingURL=header.css.map */

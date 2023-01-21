@@ -1,0 +1,24 @@
+.resident-con {
+  background-color: #8aefef;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.resident-con .resident-title {
+  background-color: blue;
+}
+
+.resident-con .resident-title h4 {
+  margin-left: 10px;
+}
+
+.resident-con .con-2 .resident-tb-option {
+  background-color: antiquewhite;
+  padding: 1em;
+}
+
+.resident-con .con-2 .resident-tb-option input {
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */

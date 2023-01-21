@@ -1,0 +1,19 @@
+.resident-con {
+    background-color: rgb(138, 239, 239);
+    height: fit-content;
+    .resident-title {
+        background-color: blue;
+        h4 {
+            margin-left: 10px;
+        }
+    }
+    .con-2 {
+        .resident-tb-option {
+            background-color: antiquewhite;
+            padding: 1em;
+            input {
+                outline: none;
+            }
+        }
+    }
+}

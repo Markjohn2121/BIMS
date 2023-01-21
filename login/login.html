@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../login/scss/style.css">
+    <title>BIMS</title>
+</head>
+
+<body>
+
+    <div id="login_page">
+
+        <div class="bc bc1"></div>
+        <div class="bc bc2"></div>
+        <div class="bc bc3"></div>
+        <div class="bc bc4"></div>
+        <div class="bc bc5"></div>
+
+        <!-- Login form -->
+        <form method="post" id="login_form">
+            <div class="errmsg">
+                <p id="loginError">Incorrect Username or Password</p>
+            </div>
+            <div class="con">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="username">
+            </div>
+            <div class="con">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" placeholder="password">
+            </div>
+            <div class="con">
+                <button type="submit" id="login_btn">Login</button>
+                <h4 id="goregister_btn">Register</h4>
+            </div>
+        </form>
+
+        <!-- Register Form -->
+
+        <form method="post" id="register_form">
+            <div class="errmsg">
+                <p id="registerError">Incorrect Username or Password</p>
+            </div>
+            <div class="con">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="addusername" placeholder="Create username">
+            </div>
+            <div class="con">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="addpassword" placeholder="Create password">
+            </div>
+            <div class="con">
+                <label for="confirmpass">Confirm Password</label>
+                <input type="text" name="confirmpass" id="confirmpass" placeholder="Confirm password">
+            </div>
+            <div class="con">
+                <button type="submit" id="register_btn">Register</button>
+                <h4 id="gologin_btn">go to login</h4>
+            </div>
+        </form>
+
+
+
+    </div>
+
+    <script src="../login/js/popper.js"></script>
+</body>
+
+</html>

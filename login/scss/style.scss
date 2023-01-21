@@ -1,0 +1,225 @@
+@import url("../color.css");
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(214, 214, 219);
+    overflow: hidden;
+}
+
+#login_page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgcolor);
+    overflow: hidden;
+}
+
+.bc {
+    background: radial-gradient( red, blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 20% 80% 45% 55% / 30% 30% 70% 70%;
+    position: absolute;
+    transform: rotate(2deg);
+    transform: translate(80px, 120px);
+}
+
+.bc1 {
+    background: radial-gradient( rgb(68, 13, 141), rgb(4, 127, 143));
+    width: 300px;
+    height: 300px;
+    transform: translate(310px, -200px);
+}
+
+.bc2 {
+    width: 300px;
+    height: 300px;
+    transform: rotate(10deg);
+    transform: translate(-300px, -100px);
+}
+
+.bc3 {
+    background: radial-gradient( rgb(134, 8, 86), rgb(194, 197, 6));
+    transform: rotate(20deg);
+    width: 100px;
+    height: 100px;
+    transform: translate(100px, -100px);
+}
+
+.bc4 {
+    width: 300px;
+    height: 300px;
+    transform: translate(-400px, 250px);
+}
+
+#login_form,
+#register_form {
+    background: rgba( 255, 253, 253, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 6px);
+    -webkit-backdrop-filter: blur( 6px);
+    border-radius: 10px;
+    width: 25em;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    // z-index: 10;
+    .errmsg {
+        width: inherit;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        #loginError,
+        #registerError {
+            word-wrap: break-word;
+            color: red;
+            padding: 0.5em;
+            border: 1px solid red;
+            border-radius: 0.5em;
+        }
+    }
+    .con {
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: space-around;
+        #login_btn,
+        #register_btn {
+            font-size: 1.3em;
+            width: 6em;
+            border: none;
+            border-radius: 1em;
+            outline: none;
+            border: 1px solid blue;
+        }
+        label {
+            font-size: 1.2em;
+            letter-spacing: .2em;
+            float: left;
+            margin-bottom: 5px;
+        }
+        input {
+            background-color: transparent;
+            // background-color: rgba(229, 230, 230, 0.356);
+            font-size: 1em;
+            letter-spacing: 0.2em;
+            float: left;
+            margin-bottom: 10px;
+            height: 1.9em;
+            width: inherit;
+            text-align: center;
+            outline: none;
+            border: 2px solid rgb(0, 0, 0);
+            border-top-color: rgba(229, 230, 230, 0.356);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        #goregister_btn,
+        #gologin_btn {
+            color: rgb(12, 12, 216);
+            cursor: pointer;
+        }
+    }
+}
+
+#register_form {
+    height: 70vh;
+    display: none;
+}
+
+.register {
+    display: none;
+}
+
+.login {
+    display: none;
+}
+
+// Large Screen
+@media only screen and (max-width:1200px) {
+    #login_form,
+    #register_form {
+        width: 60%;
+        .con {
+            width: 70%;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 98%;
+        }
+    }
+}
+
+// Laptop
+@media only screen and (max-width:992px) {
+    #login_form,
+    #register_form {
+        width: 70%;
+        .con {
+            width: 60%;
+            margin-bottom: 5px;
+        }
+        label {
+            float: left;
+            margin-bottom: 5px;
+        }
+        input {
+            float: left;
+            margin-bottom: 10px;
+            height: 2em;
+            width: 98%;
+        }
+    }
+}
+
+// Tablet
+@media only screen and (max-width:768px) {
+    #login_form,
+    #register_form {
+        width: 80%;
+        .con {
+            width: 80%;
+            margin-bottom: 5px;
+        }
+        label {
+            float: left;
+            margin-bottom: 5px;
+        }
+        input {
+            float: left;
+            width: 98%;
+        }
+    }
+}
+
+// Mobile
+@media only screen and (max-width:330px) {
+    #login_form,
+    #register_form {
+        width: 95%;
+        .con {
+            width: 95%;
+            margin-bottom: 5px;
+        }
+        label {
+            float: left;
+            margin-bottom: 5px;
+        }
+        input {
+            float: left;
+            width: inherit;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+@import url("../color.css");
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #d6d6db;
+  overflow: hidden;
+}
+
+#login_page {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--bgcolor);
+  overflow: hidden;
+}
+
+.bc {
+  background: radial-gradient(red, blue);
+  width: 200px;
+  height: 200px;
+  border-radius: 20% 80% 45% 55% / 30% 30% 70% 70%;
+  position: absolute;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  -webkit-transform: translate(80px, 120px);
+          transform: translate(80px, 120px);
+}
+
+.bc1 {
+  background: radial-gradient(#440d8d, #047f8f);
+  width: 300px;
+  height: 300px;
+  -webkit-transform: translate(310px, -200px);
+          transform: translate(310px, -200px);
+}
+
+.bc2 {
+  width: 300px;
+  height: 300px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-transform: translate(-300px, -100px);
+          transform: translate(-300px, -100px);
+}
+
+.bc3 {
+  background: radial-gradient(#860856, #c2c506);
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translate(100px, -100px);
+          transform: translate(100px, -100px);
+}
+
+.bc4 {
+  width: 300px;
+  height: 300px;
+  -webkit-transform: translate(-400px, 250px);
+          transform: translate(-400px, 250px);
+}
+
+#login_form,
+#register_form {
+  background: rgba(255, 253, 253, 0.35);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  width: 25em;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#login_form .errmsg,
+#register_form .errmsg {
+  width: inherit;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+#login_form .errmsg #loginError,
+#login_form .errmsg #registerError,
+#register_form .errmsg #loginError,
+#register_form .errmsg #registerError {
+  word-wrap: break-word;
+  color: red;
+  padding: 0.5em;
+  border: 1px solid red;
+  border-radius: 0.5em;
+}
+
+#login_form .con,
+#register_form .con {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+#login_form .con #login_btn,
+#login_form .con #register_btn,
+#register_form .con #login_btn,
+#register_form .con #register_btn {
+  font-size: 1.3em;
+  width: 6em;
+  border: none;
+  border-radius: 1em;
+  outline: none;
+  border: 1px solid blue;
+}
+
+#login_form .con label,
+#register_form .con label {
+  font-size: 1.2em;
+  letter-spacing: .2em;
+  float: left;
+  margin-bottom: 5px;
+}
+
+#login_form .con input,
+#register_form .con input {
+  background-color: transparent;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  float: left;
+  margin-bottom: 10px;
+  height: 1.9em;
+  width: inherit;
+  text-align: center;
+  outline: none;
+  border: 2px solid black;
+  border-top-color: rgba(229, 230, 230, 0.356);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#login_form .con #goregister_btn,
+#login_form .con #gologin_btn,
+#register_form .con #goregister_btn,
+#register_form .con #gologin_btn {
+  color: #0c0cd8;
+  cursor: pointer;
+}
+
+#register_form {
+  height: 70vh;
+  display: none;
+}
+
+.register {
+  display: none;
+}
+
+.login {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #login_form,
+  #register_form {
+    width: 60%;
+  }
+  #login_form .con,
+  #register_form .con {
+    width: 70%;
+    margin-bottom: 5px;
+  }
+  #login_form input,
+  #register_form input {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #login_form,
+  #register_form {
+    width: 70%;
+  }
+  #login_form .con,
+  #register_form .con {
+    width: 60%;
+    margin-bottom: 5px;
+  }
+  #login_form label,
+  #register_form label {
+    float: left;
+    margin-bottom: 5px;
+  }
+  #login_form input,
+  #register_form input {
+    float: left;
+    margin-bottom: 10px;
+    height: 2em;
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #login_form,
+  #register_form {
+    width: 80%;
+  }
+  #login_form .con,
+  #register_form .con {
+    width: 80%;
+    margin-bottom: 5px;
+  }
+  #login_form label,
+  #register_form label {
+    float: left;
+    margin-bottom: 5px;
+  }
+  #login_form input,
+  #register_form input {
+    float: left;
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  #login_form,
+  #register_form {
+    width: 95%;
+  }
+  #login_form .con,
+  #register_form .con {
+    width: 95%;
+    margin-bottom: 5px;
+  }
+  #login_form label,
+  #register_form label {
+    float: left;
+    margin-bottom: 5px;
+  }
+  #login_form input,
+  #register_form input {
+    float: left;
+    width: inherit;
+  }
+}
+/*# sourceMappingURL=style.css.map */
