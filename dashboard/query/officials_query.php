@@ -78,11 +78,16 @@ $updatedPhoto = $updateFile->upload("update" ,$_FILES['photo'],$_POST['path']);
 
     } else if ($_POST['option'] === "delete") {
 
-
-        // $deleteFile = new FileUpload();
+        
         
         $DeleteOfficials_data = "DELETE FROM `officails_data` WHERE officails_id = ?";
-
+        
+        $deleted;
+        if(unlink(".".$_POST['photo'])){
+            $deleted = "true";
+        }else{
+            $deleted = "false";
+        }
         try {
             $deletedata = $conn->prepare($DeleteOfficials_data);
 
@@ -90,11 +95,8 @@ $updatedPhoto = $updateFile->upload("update" ,$_FILES['photo'],$_POST['path']);
             $deletedata->bindParam(1, $_POST['id'], PDO::PARAM_INT);
 
             $deletedata->execute();
-            echo json_encode(array('deleted' => true));
+            echo json_encode(array('deleted' => $deleted));
             
-            if(unlink("./filee")){
-                
-            }
             unset($deletedata);
         } catch (PDOException $th) {
 

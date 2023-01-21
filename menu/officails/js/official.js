@@ -72,6 +72,7 @@ function addOfficialCon(data) {
         let delete_official_btn = document.getElementsByClassName("delete-official");
         delete_official_btn[addCon].addEventListener('click', function() {
 
+            alert(data[this.dataset.id].Photo);
             deleteOfficial(data[this.dataset.id].Id, data[this.dataset.id].Photo);
 
 

@@ -36,7 +36,7 @@ class FileUpload
 
             if ($_FILES['photo']['size'] == 0 && $_FILES['photo']['error'] == 4) {
 
-                return "ewan"; //"../../assets/ui-user-profile.svg";
+                return "../../assets/ui-user-profile.svg";
 
             } else{
 
@@ -93,6 +93,9 @@ class FileUpload
                 }
             }
         } else if ($option == "delete") {
+
+
+
 
 
         }
